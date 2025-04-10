@@ -1,0 +1,70 @@
+ATM Application
+This is a simple system built using Java. It allows users to create accounts, log in (by account number or user ID), deposit/withdraw money, check balance, and view transaction history.
+
+* Features
+1.Create a new account with account number, user ID, PIN, and initial deposit
+2.Login using either account number or user ID
+3.Deposit and withdraw money
+4.Check account balance
+5.View transaction history
+6.Multiple accounts supported per user
+
+Secure login using PIN
+
+When the app starts, you'll see a main menu:
+
+----Main Menu----
+
+Welcome to this ATM
+1 Create Account
+2 Login
+3 Login with userid
+4 Exit
+
+ # Create Account
+  Enter your account number (e.g., 1234)
+  Choose a user ID (e.g., "john_doe")
+  Set your PIN
+  Enter an initial deposit amount
+
+ # Login (by account number)
+  Input your account number
+  Enter your PIN
+
+ # Login (by user ID)
+  Type your user ID
+  Enter your PIN
+
+You'll then be shown a list of your accounts to choose from
+
+After Logging In:
+You can now perform ATM operations:
+---ATM Menu---
+1. Balance
+2. Deposit
+3. Withdraw
+4. Transaction history
+5. Logout
+
+
+1. Balance: Shows the current balance of the selected account
+2. Deposit: Add money to the account
+3. Withdraw: Take money out (as long as you have sufficient funds)
+4. Transaction history: View your previous actions
+5. Logout: Return to the main menu
+
+ Example ----
+Start the app
+
+Create an account:
+Account No: 1001
+User ID: ashmita123
+PIN: 123
+Deposit: 1000
+Login using your account or user ID
+Choose account if you have multiple and login using pin again
+
+Access ATM features (check balance, withdraw, etc.)
+
+The app is console-based for simplicity and learning purposes
+

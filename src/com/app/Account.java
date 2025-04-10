@@ -2,13 +2,13 @@ package com.app;
 
 public class Account {
     private int accountNumber;
-    private String username;
+    private String userid;
     private int pin;
     private double balance;
     
-    public Account(int accountNumber,String username,int pin,double balance) {
+    public Account(int accountNumber,String userid,int pin,double balance) {
     	this.accountNumber=accountNumber;
-    	this.username=username;
+    	this.userid=userid;
     	this.pin=pin;
     	this.balance=balance;
     }
@@ -16,8 +16,8 @@ public class Account {
 	public int getAccountNumber() {
 		return accountNumber;
 	}
-	public String getUserName() {
-		return username;
+	public String getUserId() {
+		return userid;
 	}
 	public int getPin() {
 		return pin;
@@ -28,6 +28,8 @@ public class Account {
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
+
+	
     
     
 }

@@ -12,16 +12,21 @@ public class ATM {
 	transactions = new double[100];
 	tcount = 0;
    }
-   public void createAccount(int accountNumber,String username,int pin,double balance) {
-   	if(accountCount<accounts.length) {
-   		Account account=new Account(accountNumber,username,pin,balance);
-   		accounts[accountCount++]=account;
-   		System.out.println("Account Created Successfully");
-   	}
-   	else {
-   		System.out.println("Acount limit reached");
-   	}
-   }
+   public void createAccount(int accountNumber,String userid,int pin,double balance) {
+	   for(int i=0;i<accountCount;i++) {
+	   if(accountNumber==accounts[i].getAccountNumber()) {
+		   System.out.println("Account Cannot Created !! Account number already registered");
+		   return;
+	   }
+	 }
+	   if(accountCount<accounts.length) {
+		      Account account=new Account(accountNumber,userid,pin,balance);
+		      accounts[accountCount++]=account;
+		      System.out.println("Account Created Successfully");
+	       	} else {
+		      System.out.println("Acount limit reached"); 	
+		      }
+	     }
    public Account login(int accountNumber,int pin) {
 	  for(int i=0;i<accountCount;i++) {
 		  if(accounts[i].getAccountNumber()==accountNumber && accounts[i].getPin()==pin)
@@ -64,14 +69,49 @@ public class ATM {
 			System.out.println("invalid");
 		}
     }
-public void showTransactions() {		
-	 System.out.println("Transactions history");
-	 for(int i=0;i<tcount;i++) {
-		if(transactions[i]>0) { 
+        public void showTransactions() {		
+	      System.out.println("Transactions history");
+	      for(int i=0;i<tcount;i++) {
+		    if(transactions[i]>0) { 
 			System.out.println("deposit "+transactions[i]);
-		} else {
+		    } else {
 			System.out.println("withdraw "+(-transactions[i]));
 		}
 	 }
 }
+       public Account login(String userid, int pin) {
+    	     for (int i = 0; i < accountCount; i++) {	   
+    			  if(accounts[i].getUserId().equals(userid) && accounts[i].getPin()==pin)
+    			  {
+    				  return accounts[i];
+    			  }
+    		  }
+		return null;
+       }
+       
+       public void AccountsByUserId(String userid) {
+           boolean found = false;
+           System.out.println("User ID: " + userid);
+           for (int i = 0; i < accountCount; i++) {
+               if (accounts[i].getUserId().equals(userid)) {
+                   System.out.println("Account Number: " + accounts[i].getAccountNumber());
+                   found = true;
+               }
+           }
+           if (!found) {
+               System.out.println("No accounts found for this User ID.");
+           }
+       }
+       
+       public Account getAccount(int accountNumber) {
+           for (int i = 0; i < accountCount; i++) {
+               if (accounts[i].getAccountNumber() == accountNumber) {
+                   return accounts[i];
+               }
+           }
+           return null;
+       }
+       
 }
+
+   

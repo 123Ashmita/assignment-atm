@@ -1,4 +1,4 @@
-ATM Application
+ATM Application  <br>
 This is a simple system built using Java. It allows users to create accounts, log in (by account number or user ID), deposit/withdraw money, check balance, and view transaction history.
 
 * Features   <br>
@@ -15,7 +15,7 @@ When the app starts, you'll see a main menu:
 
 ----Main Menu----
 
-Welcome to this ATM
+Welcome to this ATM  <br>
 1 Create Account   <br>
 2 Login   <br>
 3 Login with userid  <br>

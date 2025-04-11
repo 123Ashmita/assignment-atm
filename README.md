@@ -20,6 +20,7 @@ Welcome to this ATM
 2 Login
 3 Login with userid
 4 Exit
+<br>
 
  # Create Account
   Enter your account number (e.g., 1234)
@@ -38,6 +39,7 @@ Welcome to this ATM
 You'll then be shown a list of your accounts to choose from
 
 After Logging In:
+<br>
 You can now perform ATM operations:
 ---ATM Menu---
 1. Balance
@@ -55,12 +57,12 @@ You can now perform ATM operations:
 
  Example ----
 Start the app
-
-Create an account:
-Account No: 1001
-User ID: ashmita123
-PIN: 123
-Deposit: 1000
+<br>
+Create an account: <br>
+Account No: 1001 <br>
+User ID: ashmita123   <br>
+PIN: 123   <br>
+Deposit: 1000   <br>
 Login using your account or user ID
 Choose account if you have multiple and login using pin again
 
